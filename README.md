@@ -59,7 +59,7 @@ print("Sharpe :", round(sharpe(backtest(prix, fast=20, slow=50)), 2))
 
 Le signal est décalé d'un jour : la stratégie n'utilise jamais d'information du futur.
 
-## Comment ça s'automatise (100 % gratuit)
+## Comment ça s'automatise 
 
 1. Chaque amélioration prête est un dossier `backlog/NN-nom/` avec `message.txt` (message de commit)
    et `files/` (fichiers à ajouter, code + tests).
