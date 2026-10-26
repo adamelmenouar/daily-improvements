@@ -1,0 +1,1 @@
+Risque : ajoute les contributions au risque par actif

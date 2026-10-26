@@ -1,0 +1,1 @@
+Risque : ajoute la tracking error et l'information ratio

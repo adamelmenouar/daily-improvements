@@ -1,0 +1,1 @@
+Trading : ajoute une stratégie de momentum de série temporelle

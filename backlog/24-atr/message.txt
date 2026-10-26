@@ -1,0 +1,1 @@
+Trading : ajoute l'ATR et le dimensionnement de position selon la volatilité

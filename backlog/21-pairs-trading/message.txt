@@ -1,0 +1,1 @@
+Trading : ajoute un signal de pairs trading (z-score du spread)

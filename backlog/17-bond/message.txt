@@ -1,0 +1,1 @@
+Pricing : ajoute le prix et la duration d'une obligation

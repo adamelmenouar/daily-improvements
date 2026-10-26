@@ -1,0 +1,1 @@
+Portefeuille : ajoute le risk parity (inverse volatilité et ERC)

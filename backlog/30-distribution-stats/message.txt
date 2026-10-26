@@ -1,0 +1,1 @@
+Risque : ajoute le test de normalité de Jarque-Bera
