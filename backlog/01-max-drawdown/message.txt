@@ -1,1 +1,0 @@
-Risque : ajoute le drawdown maximal et son test
