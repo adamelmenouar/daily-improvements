@@ -1,0 +1,98 @@
+name: daily-improvement
+
+# One small, validated improvement per day, proposed as a pull request.
+on:
+  schedule:
+    - cron: "17 6 * * *" # 06:17 UTC daily (off the :00 mark to avoid peak delays)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-improvement
+  cancel-in-progress: false
+
+env:
+  AUTHOR_NAME: adamelmenouar
+  AUTHOR_EMAIL: adamelmenouar18@gmail.com
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Skip if a previous daily PR is still open
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          open=$(gh pr list --state open --label daily-improvement --json number --jq length)
+          echo "open=$open" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.open == '0'
+        with:
+          python-version: "3.12"
+
+      - name: Ask Claude for one small improvement
+        if: steps.gate.outputs.open == '0'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: >-
+            --model claude-sonnet-5-5
+            --max-turns 25
+            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(git diff:*),Bash(git status:*),Bash(git log:*),Bash(pip install:*),Bash(pytest:*),Bash(python:*)"
+          prompt: |
+            You are improving ${{ github.repository }}: data science applied to
+            finance (risk, trading, portfolio, pricing), on SIMULATED data only.
+            Make exactly ONE small, useful, low-risk improvement: documentation,
+            a relevant test, a bug fix, or a worked example. Ideas: new risk
+            measure, a drawdown metric, a new backtest strategy, a portfolio
+            optimisation example, a stress test, better docstrings.
+            Rules:
+            - Check `git log` first and pick something different from recent days.
+            - At most 3 files and about 80 changed lines, inside risk/, trading/,
+              tests/ or README.md.
+            - Never add real market data, API keys, or financial advice.
+            - Do NOT run git commit/push; the workflow does that.
+            - Run `pytest -q` and fix anything you broke.
+            - If nothing worthwhile, change nothing.
+            - Write a one-line commit subject (imperative, <72 chars) to
+              /tmp/commit-message.txt and a 2-4 line PR description to
+              /tmp/pr-body.md.
+
+      - name: Validate, commit, push, open PR
+        if: steps.gate.outputs.open == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes proposed today; nothing to commit."
+            exit 0
+          fi
+
+          # Independent validation
+          pip install -r requirements.txt
+          pytest -q
+          # Refuse protected paths even if the model ignored the rules.
+          if echo "$changed" | grep -Eq '(^|/)\.env|\.github/workflows/'; then
+            echo "::error::Change touches a protected path; aborting."; exit 1
+          fi
+
+          branch="daily-improvement/$(date -u +%Y-%m-%d)"
+          msg=$(head -n1 /tmp/commit-message.txt 2>/dev/null || echo "Daily small improvement")
+          git config user.name "$AUTHOR_NAME"
+          git config user.email "$AUTHOR_EMAIL"
+          git checkout -b "$branch"
+          git add -A -- . ':!node_modules'
+          git commit -m "$msg"   # real commit, real timestamp; fails if empty
+          git push -u origin "$branch"
+          gh label create daily-improvement --color 0e8a16 2>/dev/null || true
+          gh pr create --base main --head "$branch" --label daily-improvement \
+            --title "$msg" --body-file /tmp/pr-body.md
