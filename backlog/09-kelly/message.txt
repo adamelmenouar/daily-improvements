@@ -1,0 +1,1 @@
+Trading : ajoute le critère de Kelly pour dimensionner une position

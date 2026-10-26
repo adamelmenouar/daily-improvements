@@ -1,0 +1,1 @@
+Trading : ajoute les ratios de Sortino et de Calmar

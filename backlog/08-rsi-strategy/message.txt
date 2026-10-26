@@ -1,0 +1,1 @@
+Trading : ajoute l'indicateur RSI et une stratégie de retour à la moyenne
