@@ -1,1 +1,0 @@
-Risque : ajoute la volatilité EWMA (RiskMetrics)
