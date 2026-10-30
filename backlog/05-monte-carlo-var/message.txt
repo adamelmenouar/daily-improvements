@@ -1,1 +1,0 @@
-Risque : ajoute une VaR Monte Carlo (mouvement brownien géométrique)
