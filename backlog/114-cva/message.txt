@@ -1,0 +1,1 @@
+Risque : ajoute une CVA simplifiée (risque de contrepartie)

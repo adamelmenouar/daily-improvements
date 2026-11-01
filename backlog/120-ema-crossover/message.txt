@@ -1,0 +1,1 @@
+Trading : ajoute la stratégie de croisement de moyennes exponentielles

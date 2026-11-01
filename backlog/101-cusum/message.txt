@@ -1,0 +1,1 @@
+Séries temporelles : ajoute la détection de rupture de moyenne par CUSUM

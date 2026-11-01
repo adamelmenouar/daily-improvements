@@ -1,0 +1,1 @@
+Séries temporelles : ajoute un hedge ratio dynamique par filtre de Kalman

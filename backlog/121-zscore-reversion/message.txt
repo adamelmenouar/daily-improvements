@@ -1,0 +1,1 @@
+Trading : ajoute la stratégie de retour à la moyenne sur score z

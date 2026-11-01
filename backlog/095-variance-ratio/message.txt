@@ -1,0 +1,1 @@
+Séries temporelles : ajoute le ratio de variance de Lo-MacKinlay

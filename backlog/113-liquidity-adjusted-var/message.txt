@@ -1,0 +1,1 @@
+Risque : ajoute la VaR ajustée de la liquidité (LVaR)

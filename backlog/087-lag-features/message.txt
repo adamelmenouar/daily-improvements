@@ -1,0 +1,1 @@
+Utilitaires : ajoute la création de variables retardées

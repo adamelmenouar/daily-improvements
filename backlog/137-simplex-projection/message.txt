@@ -1,0 +1,1 @@
+Portefeuille : ajoute la projection de poids sur le simplexe (long-only)

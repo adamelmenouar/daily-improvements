@@ -1,0 +1,1 @@
+Trading : ajoute le coefficient d'information (IC) d'un signal

@@ -1,0 +1,1 @@
+Séries temporelles : ajoute l'ajustement et la prévision d'un AR(1)

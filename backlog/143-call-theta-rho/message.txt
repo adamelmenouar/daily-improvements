@@ -1,0 +1,1 @@
+Pricing : ajoute le thêta et le rho d'un call

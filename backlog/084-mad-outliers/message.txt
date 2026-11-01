@@ -1,0 +1,1 @@
+Utilitaires : ajoute la détection de valeurs aberrantes par MAD

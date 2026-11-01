@@ -14,12 +14,14 @@ toujours accompagnée de tests.
 |---|---|
 | `risk/` | Value-at-Risk, Expected Shortfall, drawdown, volatilité, tests de validation de modèles de risque |
 | `trading/` | Backtests vectorisés, indicateurs techniques, ratios de performance, coûts de transaction |
+| `ts/` | Séries temporelles : autocorrélation, tests de stationnarité et de cointégration, filtre de Kalman |
+| `utils/` | Conversions de rendements, nettoyage, rééchantillonnage |
 | `portfolio/` | Optimisation et allocation de portefeuille, rééquilibrage |
 | `pricing/` | Valorisation d'options et d'obligations |
 | `tests/` | Un fichier de tests par module (`pytest`) |
 | `backlog/` | Améliorations en attente, appliquées une par jour par le robot |
 
-Les dossiers `portfolio/` et `pricing/` apparaissent au fil des jours, au moment où leur première
+Les dossiers `portfolio/`, `pricing/`, `ts/` et `utils/` apparaissent au fil des jours, au moment où leur première
 amélioration est appliquée. L'historique Git (`git log`) montre ce qui a été ajouté et quand.
 
 ## Démarrage rapide
@@ -61,14 +63,14 @@ Le signal est décalé d'un jour : la stratégie n'utilise jamais d'information 
 
 ## Comment ça s'automatise 
 
-1. Chaque amélioration prête est un dossier `backlog/NN-nom/` avec `message.txt` (message de commit)
+1. Chaque amélioration prête est un dossier `backlog/NNN-nom/` avec `message.txt` (message de commit)
    et `files/` (fichiers à ajouter, code + tests).
 2. Chaque jour à 06:17 UTC, le workflow `daily-improvement` prend la première, lance `pytest`,
    puis fait un vrai commit et le pousse sur `main`.
 3. Si les tests échouent, rien n'est commité. Si le backlog est vide, rien non plus : jamais de commit vide.
 4. Aucune API payante, aucun secret : GitHub Actions est gratuit sur un dépôt public.
 
-Pour ajouter une amélioration : créer `backlog/NN-nom/` avec un numéro supérieur au dernier,
+Pour ajouter une amélioration : créer `backlog/NNN-nom/` avec un numéro à 3 chiffres supérieur au dernier (l'ordre d'application est l'ordre alphabétique),
 vérifier que `pytest` passe une fois les fichiers copiés à la racine, puis pousser.
 
 ## Conventions

@@ -1,0 +1,1 @@
+Risque : ajoute la copule gaussienne et la probabilité de pertes jointes

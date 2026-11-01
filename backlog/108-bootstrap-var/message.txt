@@ -1,0 +1,1 @@
+Risque : ajoute l'intervalle de confiance bootstrap d'une VaR

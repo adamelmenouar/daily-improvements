@@ -1,0 +1,1 @@
+Utilitaires : ajoute les conversions de rendements (simple, log, cumulé, annualisé)

@@ -1,0 +1,1 @@
+Pricing : ajoute le coût du capital (CAPM et WACC)

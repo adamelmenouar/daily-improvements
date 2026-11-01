@@ -1,0 +1,1 @@
+Pricing : ajoute le taux et la valeur d'un swap de taux

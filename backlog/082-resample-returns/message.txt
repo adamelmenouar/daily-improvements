@@ -1,0 +1,1 @@
+Utilitaires : ajoute la composition des rendements à une fréquence plus basse

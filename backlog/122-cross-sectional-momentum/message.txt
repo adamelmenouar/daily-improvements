@@ -1,0 +1,1 @@
+Trading : ajoute le momentum en coupe transversale (long/short)

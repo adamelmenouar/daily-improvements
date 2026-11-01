@@ -1,0 +1,1 @@
+Trading : ajoute la simulation d'un ordre avec stop et objectif

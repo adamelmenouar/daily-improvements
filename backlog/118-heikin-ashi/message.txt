@@ -1,0 +1,1 @@
+Trading : ajoute les bougies Heikin-Ashi
