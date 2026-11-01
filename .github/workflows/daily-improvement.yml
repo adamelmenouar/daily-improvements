@@ -1,6 +1,6 @@
 name: daily-improvement
 
-# Une petite amélioration par jour, tirée de backlog/ (gratuit : aucune API, aucun secret).
+# Jusqu'à 5 améliorations distinctes par jour, tirée de backlog/ (gratuit : aucune API, aucun secret).
 on:
   schedule:
     - cron: "17 6 * * *" # 06:17 UTC chaque jour
@@ -16,6 +16,7 @@ concurrency:
 env:
   AUTHOR_NAME: adamelmenouar
   AUTHOR_EMAIL: adamelmenouar18@gmail.com
+  PER_DAY: "5"
 
 jobs:
   improve:
@@ -28,25 +29,39 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Appliquer la prochaine amélioration, valider, commit, push
+      - name: Appliquer jusqu'à PER_DAY améliorations, valider chacune, commit, push
         run: |
           set -euo pipefail
-          item=$(ls -d backlog/*/ 2>/dev/null | sort | head -n1 || true)
-          if [ -z "$item" ]; then
-            echo "Backlog vide : rien à faire aujourd'hui (aucun commit vide)."
-            exit 0
-          fi
-          item=${item%/}
-          msg=$(head -n1 "$item/message.txt")
-
-          cp -r "$item/files/." .
-          git rm -rq "$item"
-
           pip install -r requirements.txt
-          pytest -q    # si ça échoue, le job s'arrête avant tout commit
-
           git config user.name "$AUTHOR_NAME"
           git config user.email "$AUTHOR_EMAIL"
-          git add -A
-          git commit -m "$msg"   # horodatage réel ; échoue si rien à committer
-          git push origin HEAD:main
+
+          done_count=0
+          for i in $(seq 1 "$PER_DAY"); do
+            item=$(ls -d backlog/*/ 2>/dev/null | sort | head -n1 || true)
+            if [ -z "$item" ]; then
+              echo "Backlog vide : rien de plus à faire (aucun commit vide)."
+              break
+            fi
+            item=${item%/}
+            msg=$(head -n1 "$item/message.txt")
+
+            cp -r "$item/files/." .
+            git rm -rq "$item"
+
+            if ! pytest -q; then
+              echo "::warning::Tests en échec pour $item : améliorations précédentes conservées, celle-ci annulée."
+              git reset -q --hard HEAD
+              git clean -fdq
+              break
+            fi
+
+            git add -A
+            git commit -q -m "$msg"   # horodatage réel ; échoue si rien à committer
+            done_count=$((done_count + 1))
+          done
+
+          if [ "$done_count" -gt 0 ]; then
+            git push origin HEAD:main
+          fi
+          echo "$done_count amélioration(s) poussée(s)."
