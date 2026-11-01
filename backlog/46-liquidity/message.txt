@@ -1,0 +1,1 @@
+Risque : ajoute l'illiquidité d'Amihud et le coût de spread

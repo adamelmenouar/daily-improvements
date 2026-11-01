@@ -1,0 +1,1 @@
+Risque : ajoute la VaR par théorie des valeurs extrêmes (POT / Pareto généralisée)

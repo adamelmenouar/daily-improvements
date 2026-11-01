@@ -1,0 +1,1 @@
+Trading : ajoute le dimensionnement à fraction fixe du capital

@@ -1,0 +1,1 @@
+Risque : ajoute le passage de la VaR à un horizon plus long (racine du temps)

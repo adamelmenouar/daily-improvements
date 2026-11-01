@@ -1,0 +1,1 @@
+Risque : ajoute la perte inattendue de Vasicek (formule de Bâle)
