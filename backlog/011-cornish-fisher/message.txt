@@ -1,1 +1,0 @@
-Risque : ajoute la VaR de Cornish-Fisher (asymétrie et kurtosis)
