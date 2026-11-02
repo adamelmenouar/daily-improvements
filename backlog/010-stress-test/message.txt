@@ -1,1 +1,0 @@
-Risque : ajoute un stress test de portefeuille par chocs de marché
