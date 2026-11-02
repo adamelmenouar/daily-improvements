@@ -1,1 +1,0 @@
-Risque : ajoute le bêta et l'alpha de Jensen (CAPM)
