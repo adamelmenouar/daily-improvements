@@ -1,1 +1,0 @@
-Risque : ajoute une covariance par rétrécissement (shrinkage)
