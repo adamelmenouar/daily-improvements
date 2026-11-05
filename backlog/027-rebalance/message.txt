@@ -1,1 +1,0 @@
-Portefeuille : ajoute le calcul des ordres de rééquilibrage et du turnover
