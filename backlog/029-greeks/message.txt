@@ -1,1 +1,0 @@
-Pricing : ajoute les Grecques Black-Scholes (delta, gamma, vega)
