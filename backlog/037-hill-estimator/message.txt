@@ -1,1 +1,0 @@
-Risque : ajoute l'estimateur de Hill de l'indice de queue
