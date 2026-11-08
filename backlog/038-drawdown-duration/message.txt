@@ -1,1 +1,0 @@
-Risque : ajoute la durée maximale sous l'eau (drawdown)
