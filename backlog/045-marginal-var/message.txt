@@ -1,1 +1,0 @@
-Risque : ajoute la VaR marginale et la VaR par composante
