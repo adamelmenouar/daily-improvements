@@ -1,1 +1,0 @@
-Risque : ajoute la correction d'une matrice de corrélation non positive
