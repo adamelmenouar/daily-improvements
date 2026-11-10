@@ -1,1 +1,0 @@
-Trading : ajoute le canal de Donchian et une stratégie de cassure
