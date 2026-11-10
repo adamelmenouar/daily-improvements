@@ -1,1 +1,0 @@
-Risque : ajoute la perte attendue de crédit (PD x LGD x EAD)
