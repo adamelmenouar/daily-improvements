@@ -1,1 +1,0 @@
-Trading : ajoute le Rate of Change et le Williams %R
