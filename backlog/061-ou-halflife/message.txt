@@ -1,1 +1,0 @@
-Trading : ajoute la demi-vie de retour à la moyenne (Ornstein-Uhlenbeck)
