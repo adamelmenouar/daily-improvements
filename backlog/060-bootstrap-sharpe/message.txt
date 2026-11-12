@@ -1,1 +1,0 @@
-Trading : ajoute un intervalle de confiance bootstrap du Sharpe
