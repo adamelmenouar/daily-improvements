@@ -1,1 +1,0 @@
-Portefeuille : ajoute l'indice de concentration (HHI) et le nombre effectif de lignes
