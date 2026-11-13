@@ -1,1 +1,0 @@
-Trading : ajoute une stratégie à stop suiveur
