@@ -1,0 +1,1 @@
+Risque : ajoute l'Expected Shortfall paramétrique (loi normale)

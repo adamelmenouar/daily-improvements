@@ -1,0 +1,1 @@
+Risque : ajoute l'annualisation du Sharpe corrigée de l'autocorrélation

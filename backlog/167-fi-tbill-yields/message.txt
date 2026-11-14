@@ -1,0 +1,1 @@
+Obligations : ajoute les rendements d'un bon du Trésor (escompte et équivalent obligataire)

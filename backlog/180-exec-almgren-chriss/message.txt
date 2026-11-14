@@ -1,0 +1,1 @@
+Exécution : ajoute la trajectoire optimale d'Almgren-Chriss

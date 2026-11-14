@@ -1,0 +1,1 @@
+Crédit : ajoute le taux de hasard et la survie à partir d'une probabilité de défaut cumulée

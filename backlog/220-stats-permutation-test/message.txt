@@ -1,0 +1,1 @@
+Statistiques : ajoute le test de permutation sur la différence de moyennes

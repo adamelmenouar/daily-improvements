@@ -1,0 +1,1 @@
+Crédit : ajoute la perte en cas de défaut à partir de recouvrements actualisés

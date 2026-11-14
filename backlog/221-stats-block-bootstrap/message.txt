@@ -1,0 +1,1 @@
+Statistiques : ajoute le bootstrap par blocs (séries autocorrélées)

@@ -1,0 +1,1 @@
+Pricing : ajoute l'ajustement quanto du prix à terme

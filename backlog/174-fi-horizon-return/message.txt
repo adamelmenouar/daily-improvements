@@ -1,0 +1,1 @@
+Obligations : ajoute le rendement total sur un horizon (réinvestissement et revente)

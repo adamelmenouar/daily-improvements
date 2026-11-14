@@ -1,0 +1,1 @@
+Obligations : ajoute la vérification d'immunisation d'un passif

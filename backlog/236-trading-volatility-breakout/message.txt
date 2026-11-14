@@ -1,0 +1,1 @@
+Trading : ajoute la stratégie de cassure de volatilité (Larry Williams)

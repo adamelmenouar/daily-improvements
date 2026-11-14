@@ -1,0 +1,1 @@
+Statistiques : ajoute un quantile lissé par noyau (KDE)

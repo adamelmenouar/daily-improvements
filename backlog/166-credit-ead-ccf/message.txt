@@ -1,0 +1,1 @@
+Crédit : ajoute l'exposition au défaut avec facteur de conversion (CCF)

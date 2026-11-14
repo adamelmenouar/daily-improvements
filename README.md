@@ -14,6 +14,12 @@ toujours accompagnée de tests.
 |---|---|
 | `risk/` | Value-at-Risk, Expected Shortfall, drawdown, volatilité, tests de validation de modèles de risque |
 | `trading/` | Backtests vectorisés, indicateurs techniques, ratios de performance, coûts de transaction |
+| `credit/` | Scoring de crédit : WoE/IV, AUC, KS, scorecard, transitions de notations, perte attendue |
+| `fixedincome/` | Obligations et taux : duration par point de courbe, roll-down, FRN, immunisation |
+| `execution/` | Exécution d'ordres : TWAP, VWAP, Almgren-Chriss, implementation shortfall |
+| `microstructure/` | Microstructure de marché : spread de Roll, lambda de Kyle, micro-prix |
+| `ml/` | Machine learning financier : CV purgée, triple barrière, ridge, importance par permutation |
+| `stats/` | Tests statistiques : Newey-West, FDR, permutation, bootstrap par blocs |
 | `ts/` | Séries temporelles : autocorrélation, tests de stationnarité et de cointégration, filtre de Kalman |
 | `utils/` | Conversions de rendements, nettoyage, rééchantillonnage |
 | `portfolio/` | Optimisation et allocation de portefeuille, rééquilibrage |
@@ -21,7 +27,7 @@ toujours accompagnée de tests.
 | `tests/` | Un fichier de tests par module (`pytest`) |
 | `backlog/` | Améliorations en attente, appliquées une par jour par le robot |
 
-Les dossiers `portfolio/`, `pricing/`, `ts/` et `utils/` apparaissent au fil des jours, au moment où leur première
+Les dossiers `portfolio/`, `pricing/`, `ts/`, `utils/`, `credit/`, `fixedincome/`, `execution/`, `microstructure/`, `ml/` et `stats/` apparaissent au fil des jours, au moment où leur première
 amélioration est appliquée. L'historique Git (`git log`) montre ce qui a été ajouté et quand.
 
 ## Démarrage rapide

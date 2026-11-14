@@ -1,0 +1,1 @@
+Exécution : ajoute le calendrier VWAP selon le profil de volume

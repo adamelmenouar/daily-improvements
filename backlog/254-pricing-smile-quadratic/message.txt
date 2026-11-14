@@ -1,0 +1,1 @@
+Pricing : ajoute l'ajustement quadratique d'un smile de volatilité

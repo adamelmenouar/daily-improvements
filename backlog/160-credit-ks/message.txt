@@ -1,0 +1,1 @@
+Crédit : ajoute la statistique de Kolmogorov-Smirnov d'un scoring

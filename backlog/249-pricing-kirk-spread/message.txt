@@ -1,0 +1,1 @@
+Pricing : ajoute l'approximation de Kirk pour les options sur spread

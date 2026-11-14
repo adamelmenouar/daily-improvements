@@ -1,0 +1,1 @@
+ML : ajoute la régression ridge en forme fermée

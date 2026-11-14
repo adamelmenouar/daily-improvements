@@ -1,0 +1,1 @@
+Statistiques : ajoute l'intervalle de confiance de la moyenne et le d de Cohen

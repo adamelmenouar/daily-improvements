@@ -1,0 +1,1 @@
+Crédit : ajoute l'AUC et le coefficient de Gini d'un scoring

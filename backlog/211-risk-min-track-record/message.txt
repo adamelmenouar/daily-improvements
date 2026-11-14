@@ -1,0 +1,1 @@
+Risque : ajoute la longueur minimale d'historique pour valider un Sharpe

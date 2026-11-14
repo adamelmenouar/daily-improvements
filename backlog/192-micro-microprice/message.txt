@@ -1,0 +1,1 @@
+Microstructure : ajoute le micro-prix pondéré par les quantités

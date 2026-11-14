@@ -1,0 +1,1 @@
+Crédit : ajoute la conversion d'une probabilité de défaut en points de scorecard

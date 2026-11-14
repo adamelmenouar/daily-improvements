@@ -1,0 +1,1 @@
+Microstructure : ajoute le lambda de Kyle (impact par unité de flux signé)

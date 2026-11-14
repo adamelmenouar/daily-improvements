@@ -1,0 +1,1 @@
+Portefeuille : ajoute le rééquilibrage partiel sous plafond de rotation

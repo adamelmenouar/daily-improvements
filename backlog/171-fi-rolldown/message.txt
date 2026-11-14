@@ -1,0 +1,1 @@
+Obligations : ajoute le rendement de roll-down sur la courbe

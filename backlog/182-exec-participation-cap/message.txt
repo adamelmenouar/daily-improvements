@@ -1,0 +1,1 @@
+Exécution : ajoute le plafonnement par taux de participation

@@ -1,0 +1,1 @@
+Portefeuille : ajoute le rétrécissement de covariance vers une corrélation constante

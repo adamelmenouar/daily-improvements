@@ -1,0 +1,1 @@
+Statistiques : ajoute l'erreur-type par jackknife

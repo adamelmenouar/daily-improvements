@@ -1,0 +1,1 @@
+Trading : ajoute la détection de régime de volatilité

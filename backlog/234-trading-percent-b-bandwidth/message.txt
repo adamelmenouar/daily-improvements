@@ -1,0 +1,1 @@
+Trading : ajoute le %B et la largeur des bandes de Bollinger
