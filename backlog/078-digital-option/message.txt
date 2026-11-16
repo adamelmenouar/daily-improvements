@@ -1,1 +1,0 @@
-Pricing : ajoute l'option digitale (cash-or-nothing)
