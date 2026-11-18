@@ -1,1 +1,0 @@
-Utilitaires : ajoute le score z glissant et l'asymétrie glissante
