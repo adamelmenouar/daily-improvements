@@ -1,1 +1,0 @@
-Séries temporelles : ajoute les moyennes mobiles simple, exponentielle et pondérée
