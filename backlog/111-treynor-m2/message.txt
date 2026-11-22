@@ -1,1 +1,0 @@
-Risque : ajoute le ratio de Treynor et le M² de Modigliani
