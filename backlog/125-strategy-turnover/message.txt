@@ -1,1 +1,0 @@
-Trading : ajoute le calcul du turnover d'une stratégie
