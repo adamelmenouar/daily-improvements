@@ -1,1 +1,0 @@
-Trading : ajoute des modèles de slippage et d'impact de marché
