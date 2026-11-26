@@ -1,1 +1,0 @@
-Trading : ajoute la simulation Monte Carlo de courbes de capital
